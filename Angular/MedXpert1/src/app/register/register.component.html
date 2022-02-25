@@ -1,0 +1,53 @@
+<div class="card" style="width: 50rem;margin-left:20%;">
+    <div class="row">
+    <div class="card-body w-50 col-xs-6">
+      <h2 class="card-title" style="text-align: center;">SignUp</h2>
+      <div class="card-text">
+        <form #form='ngForm' (ngSubmit)=register(form)>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="firstName">User</label>
+              <input type="text" class="form-control" name="user" aria-describedby="emailHelp" placeholder="Enter First Name" required ngModel #user="ngModel" >
+              <small *ngIf="user.touched && !user.valid"class="form-text text-muted alert alert-danger">First Name Must Not Be Blank</small>
+            </div>
+          </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" name="first_name" aria-describedby="emailHelp" placeholder="Enter First Name" required ngModel #first_name="ngModel" >
+                <small *ngIf="first_name.touched && !first_name.valid"class="form-text text-muted alert alert-danger">First Name Must Not Be Blank</small>
+              </div>
+             <div class="form-group">
+                <label for="Last Name">Last Name</label>
+                <input type="text" class="form-control" name="last_name" aria-describedby="emailHelp" placeholder="Enter Last Name" ngModel>
+              </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email"required email ngModel #email="ngModel">
+              <small *ngIf="email.touched && !email.valid"class="form-text text-muted alert alert-danger">Email Id  Must  Be Valid</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Password" ngModel minlength="6" required #password="ngModel">
+              <small *ngIf="password.touched && !password.valid"class="form-text text-muted alert alert-danger">Password must be at least 6 digit</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirm Password</label>
+              <input type="password" class="form-control" name="confirm_password" placeholder="Password" ngModel minlength="6" required #confirm_password="ngModel">
+              <small *ngIf="confirm_password.touched && !confirm_password.valid"class="form-text text-muted alert alert-danger">Password must be at least 6 digit</small>
+              <small *ngIf="confirm_password.touched && password.value!=confirm_password.value"> Both must be same</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid " style="margin-left: 40%;">Register
+              <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+            </button>
+            <div>
+            </div>
+          </form>
+          <small style="margin-left: 32%;">Already Registered<a routerLink="/login"> Login</a></small>
+        </div>
+    </div>
+    <div class="card-body w-50 col-xs-6"id="card2">
+    <img src="../../assets/register.png" alt="">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+*{
+    background-color: #3c3d74b4;
+}
+.text{
+    color: white;
+}
+.footer-heading{
+    color: white;
+}
+.d-block{
+    color: rgb(238, 229, 229);
+}
+.pb-3, .py-3{
+    margin-bottom: 0px!important;
+}

@@ -1,0 +1,50 @@
+.main{
+    background: url('../../assets/hero_home_bg_1.svg') no-repeat 95% 100%;
+    background-origin: content-box;
+    background-color:#363768;
+    height: 92vh;
+    size: 80%;
+}
+.card-img-top{
+    height: 60px;
+    padding-top: 20px;
+}
+.row{
+    margin-bottom: 3%;
+    margin-right: 5px;
+    margin-left: 60px;
+}
+h5{
+    text-align: center;
+}
+
+span{
+    font-size: 80%;
+}
+.card-img-top:hover{
+    padding-top: 10px;
+}
+input{
+    width: 35vw;
+    padding: 8px;
+
+}
+.search{
+    height: 43px;
+    width:  100px;
+    background-color: #74d1c6;
+    border:0px;
+}
+.btn1 button{
+    border:0.5px;
+    background-color: #474886d8;
+    color: white;
+    margin-left:2%;
+    padding:6px 20px;
+    font-weight: 600;
+    font-size: 80%;
+    border-radius: 2px;
+}
+.btn1 button:hover{
+    background-color: #74d1c6;
+}

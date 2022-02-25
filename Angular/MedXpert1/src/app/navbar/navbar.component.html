@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MedXpert</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="padding-left: 45%;">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/login">Login</a>
+        <a class="nav-item nav-link" href="#">Find A Doctor</a>
+        <a href="#" class="navbar-nav" style="margin-top:10px;">
+            <div class="dropdown show">
+                <a  href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+                  Predict Disease
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" routerLink="covid">Covid Detector</a>
+                  <a class="dropdown-item" href="#">Malaria Detector</a>
+                  <a class="dropdown-item" href="#">Pneumonia Detector</a>
+                </div>
+            </div>
+        </a>
+      </div>
+    </div>
+</nav>

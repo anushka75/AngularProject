@@ -1,0 +1,27 @@
+<div class="card" style="width: 50rem;margin-left:20%;">
+    <div class="row">
+    <div class="card-body w-50 col-xs-6">
+      <h2 class="card-title" style="text-align: center;">Login</h2>
+      <img src="../../assets/user.png" alt=""  style="padding-left: 45%;">
+      <div class="card-text">
+        <form #form='ngForm' (ngSubmit)=login(form)>
+            <div class="form-group ">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" name="emailId" aria-describedby="emailHelp" placeholder="Enter email"required email ngModel #emailId="ngModel">
+              <small *ngIf="emailId.touched && !emailId.valid"class="form-text text-muted alert alert-danger">Email Id  Must  Be Valid</small>
+            </div>
+            <div class="form-group ">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Password" ngModel minlength="6" required #password="ngModel">
+              <small *ngIf="password.touched && !password.valid"class="form-text text-muted alert alert-danger">Password must be at least 6 digit</small>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid" style="margin-left: 35%;">Login
+              <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
+            </button>
+            <small style="padding-left:3%">New Member?</small><a routerLink="/register" style="padding-left:1%">Register</a>
+            </form>
+            <!-- <small >{{result}}</small> -->
+        </div>
+    </div>
+  </div>
+</div>

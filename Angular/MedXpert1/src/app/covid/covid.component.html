@@ -1,0 +1,21 @@
+<div class="card" style="width: 40rem;margin-left:25%;">
+    <div class="row">
+    <div class="card-body w-50 col-xs-6">
+      <h2 class="card-title" style="text-align: center;">Covid Detector</h2>
+      <div class="card-text">
+
+      <form #form='ngForm' (ngSubmit)=onUpload()>
+            <div class="form-group ">
+              <label for="email">Upload Image</label>
+              <input type="file" class="form-control" id="aa" name="imageFile" aria-describedby="emailHelp" (change)="onChange($event)" required  ngModel #imageFile="ngModel">
+        
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid" style="margin-top:3%; margin-left: 45%;margin-bottom:3%;">Submit
+            </button>
+            </form>
+            <!-- <small>{{result}}</small> -->
+        </div>
+    </div>
+  </div>
+</div>
+
